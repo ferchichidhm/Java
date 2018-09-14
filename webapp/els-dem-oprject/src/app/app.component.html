@@ -1,0 +1,57 @@
+<div id="accueil-container" class="jumbotron text-center accueil-header">
+  <h1> ELS-test </h1>
+  <article>
+    <label>| Select creteria from list </label><br>
+    
+    <select (change)="selectChangeHandler($event)">
+        <option value="All">--All--</option>
+        <option value="byName">Name</option>
+        <option value="byAge">Age</option>
+        <option value="bySalary">Salary</option>
+        <option value="byDesignation">Designation</option>
+        
+    </select>
+    <p><span>You selected: </span><b>{{selecteCriteria}}</b></p>
+</article>  
+</div> 
+<div id="accueil-container-btn" class="container" >
+  <div class="row">
+    <div class="col-sm-2">
+      <h3></h3>
+      <p></p>
+      <p></p>
+    </div>
+    <div class="col-sm-8">
+      <h3></h3>
+      <div class="btn-group btn-group-justified" style="height:100px;">
+          <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Age</th>
+                  <th scope="col">Age</th>
+                  <th scope="col">Designation</th>  
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of listEmployees ">
+                  <th scope="row">{{item.name}}</th>
+                  <td>{{item.age}}</td>
+                  <td>{{item.salary}}</td>
+                  <td>{{item.designation}}</td>               
+                </tr>                                            
+              </tbody>
+            </table>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <h3></h3>        
+      <p></p>
+      <p></p>
+    </div>
+  </div>
+</div>
+<div style="border-top: 1px dashed #e8ebed;"></div>
+
+
+
